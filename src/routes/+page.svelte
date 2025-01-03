@@ -13,4 +13,7 @@
 	<Hero />
 	<ExclusiveOffer />
 	<TwoSplit />
+	<Services />
+	<CTA />
+	<Footer />
 </main>
