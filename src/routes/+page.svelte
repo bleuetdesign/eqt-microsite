@@ -1,2 +1,11 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<script lang="ts">
+	import Nav from '$lib/sections/nav.svelte';
+	import Hero from '$lib/sections/hero.svelte';
+	import ExclusiveOffer from '$lib/sections/exclusive_offer.svelte';
+</script>
+
+<Nav />
+<main>
+	<Hero />
+	<ExclusiveOffer />
+</main>
