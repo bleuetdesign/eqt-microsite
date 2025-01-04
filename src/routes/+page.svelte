@@ -3,7 +3,7 @@
 	import * as m from '$lib/paraglide/messages.js';
 </script>
 
-<nav class="bg-emerald-900 px-8 py-4">
+<nav class="bg-emerald-950 px-8 py-4">
 	<div class="mx-auto flex max-w-screen-xl items-center justify-between">
 		<div>
 			<div class="uppercase text-gray-50">Réservations</div>
@@ -19,22 +19,24 @@
 </nav>
 
 <main>
-	<section style="background-image: url(/hero.png)" class="relative bg-gray-700 bg-cover px-8 py-8">
+	<section style="background-image: url(/hero.png)" class="relative bg-cover px-8 py-8">
 		<img src="/acces_gratuit.png" alt="" class="absolute right-12 top-12" />
 		<div class="mx-auto max-w-screen-xl">
-			<div class="my-24 flex flex-col gap-y-8">
-				<h1 class="text-5xl leading-tight tracking-wide text-gray-50">{@html m.hero_title()}</h1>
-				<p class="max-w-72 text-lg leading-5 text-gray-200">
+			<div class="my-24 flex flex-col">
+				<h1 class="mb-6 text-5xl tracking-wide text-gray-50">{@html m.hero_title()}</h1>
+				<p class="mb-12 max-w-72 text-lg leading-5 text-gray-200">
 					Célèbrez l'ouverture du premier spa qui détoxifie aussi la planète.
 				</p>
-				<Button variant="light">Profitez-en vite</Button>
+				<Button variant="livid">Profitez-en vite</Button>
 			</div>
 		</div>
 	</section>
 	<section class="bg-emerald-200 px-8 py-4">
-		<div class="mx-auto max-w-screen-xl rounded-[3rem] border-2 border-emerald-950 p-4">
+		<div class="mx-auto max-w-screen-xl rounded-[3rem] border-2 border-emerald-700 p-4">
 			<div class="my-12 flex flex-col items-center gap-y-4 text-balance text-center">
-				<p class="text-2xl uppercase text-emerald-800">Offre exclusive de pré-ouverture</p>
+				<p class="text-2xl font-medium uppercase text-emerald-800">
+					Offre exclusive de pré-ouverture
+				</p>
 				<h2 class="mb-6 max-w-xl text-4xl font-bold leading-tight text-emerald-950">
 					Un accès gratuit pour 2 personnes à gagner
 				</h2>
