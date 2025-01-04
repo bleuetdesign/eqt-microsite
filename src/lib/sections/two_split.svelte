@@ -13,17 +13,22 @@
 					voit enfin le jour.
 				</p>
 			</div>
-			<div class="m-8 h-[30rem] w-[44rem] bg-gray-700"></div>
+			<img src="/spa.png" alt="" class="m-8 max-w-[24rem]" />
 		</div>
 		<div class="my-12 flex flex-row-reverse items-center">
 			<div class="flex max-w-lg flex-col">
-				<h2 class="mb-2 text-4xl font-bold leading-tight text-emerald-950">Le principe</h2>
+				<h2 class="mb-2 text-4xl font-bold leading-tight text-emerald-950">
+					<img src="/principe.svg" alt="" class="mt-[-8px] inline h-12 w-12 p-1" />
+
+					Le principe
+				</h2>
 				<p class="text-lg text-emerald-800">
 					Pura Terra utilise les gaz à effets de serre pour alimenter des installations thermales
 					nouvelle génération. Celles-ci agissent à la manière d’un purificateur d’air, relâchant
 					dans l’air de la simple vapeur d’eau.
 				</p>
 				<h2 class="mb-2 mt-16 max-w-lg text-4xl font-bold leading-tight text-emerald-950">
+					<img src="/resultat.svg" alt="" class="mt-[-8px] inline h-14 w-14" />
 					Le résultat
 				</h2>
 				<p class="text-lg text-emerald-800">
@@ -32,7 +37,7 @@
 					contribuant ainsi à détoxifier la planète, et vous aussi!
 				</p>
 			</div>
-			<div class="m-8 h-[30rem] w-[44rem] bg-gray-700"></div>
+			<img src="/ges.svg" alt="" class="m-8 mr-20 w-[24rem]" />
 		</div>
 	</div>
 </section>

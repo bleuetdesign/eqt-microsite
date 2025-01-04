@@ -3,7 +3,8 @@
 	import * as m from '$lib/paraglide/messages.js';
 </script>
 
-<section class="bg-gray-700 px-8 py-8">
+<section style="background-image: url(/hero.png)" class="relative bg-gray-700 bg-cover px-8 py-8">
+	<img src="/acces_gratuit.png" alt="" class="absolute right-12 top-12" />
 	<div class="mx-auto max-w-screen-xl">
 		<div class="my-24 flex flex-col gap-y-8">
 			<h1 class="text-5xl leading-tight tracking-wide text-gray-50">{@html m.hero_title()}</h1>
