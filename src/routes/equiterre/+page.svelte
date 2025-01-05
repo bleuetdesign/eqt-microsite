@@ -1,15 +1,18 @@
+<script lang="ts">
+	import * as m from '$lib/paraglide/messages.js';
+</script>
+
 <div class="mx-auto max-w-screen-xl">
 	<div class="bg-yellow-50 px-8">
 		<nav>
-			<img src="/equiterre.png" alt="" class="h-16" />
+			<img src="/equiterre.png" alt="" class="h-20" />
 		</nav>
 		<section class="flex flex-col items-center text-balance text-center">
 			<h1 class="mb-8 max-w-2xl text-5xl font-medium leading-snug text-gray-950">
-				Un dernier détail: Pura&nbsp;Terra est totalement <span class="text-orange-500">faux.</span>
+				{@html m.flat_cuddly_alpaca_fond()}
 			</h1>
 			<p class="mb-12 text-2xl">
-				Contrairement à ce qu’on voudrait vous faire croire,
-				<strong>le remède miracle aux changements climatiques n’existe pas.</strong>
+				{@html m.quaint_new_panther_beam()}
 			</p>
 			<img src="/arrow-down.svg" alt="" class="mb-8" />
 			<hr class="my-8 h-1 w-full border-t border-black" />
@@ -17,27 +20,23 @@
 		<section class="my-4 flex">
 			<div class="mt-1 h-5 w-5 rounded-full bg-orange-500"></div>
 			<h2 class="ml-8 max-w-lg text-balance text-3xl font-semibold">
-				Alors pourquoi faire une fausse annonce?
+				{m.mad_soft_crocodile_drum()}
 			</h2>
+			<div class="flex-grow"></div>
 			<div class="max-w-md text-lg">
 				<p>
-					Pour montrer que <strong>le danger de la désinformation, lui, est bien réel.</strong>
+					{@html m.arable_such_dolphin_zip()}
 				</p>
 				<br />
 				<p>
-					Et avec les réseaux sociaux et l’intelligence artificielle, il est toujours plus difficile
-					d’identifier le vrai du faux. Chaque jour, de plus en plus de désinformation circule et
-					nous pousse à faire des choix néfastes pour notre portefeuille, notre sécurité et notre
-					santé, dans le seul but de servir les intérêts d’entreprises qui s’enrichissent à nos
-					dépends.
+					{m.still_patient_cow_gleam()}
 				</p>
 			</div>
 		</section>
 		<hr class="my-8 h-1 w-full border-t border-black" />
 		<section class="my-16">
 			<h2 class="mb-12 text-balance text-center text-3xl font-semibold">
-				Équiterre s’engage à exposer la désinformation, pour mieux vous protéger contre ces
-				manipulations.
+				{m.shy_same_anteater_comfort()}
 			</h2>
 			<form action="">
 				<div class="flex justify-center gap-x-4">
