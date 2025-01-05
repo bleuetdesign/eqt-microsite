@@ -73,6 +73,10 @@
 	]);
 
 	let responses: null | number[] = $state(null);
+	$inspect(responses).with((_, responses) => {
+		console.log('responses updated:');
+		console.log(responses);
+	});
 </script>
 
 <main
@@ -90,8 +94,8 @@
 		<Question {...questions[0]} onclick={(i) => responses!.push(i) && questions.shift()} />
 	{:else}
 		<Answer
-			{...answers[0][responses.at(-1)!]}
-			onclick={() => answers.shift() || (location.href = '/equiterre')}
+			{...answers[0][answers[0].length === 1 ? 0 : responses.at(-1)!]}
+			onclick={() => answers.shift() && responses?.length === 3 && (location.href = '/equiterre')}
 		/>
 	{/if}
 </main>
