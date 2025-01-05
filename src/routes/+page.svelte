@@ -27,7 +27,7 @@
 				<p class="mb-12 max-w-72 text-xl font-medium text-gray-200">
 					{m.loose_tidy_panda_praise()}
 				</p>
-				<Button variant="livid" href="">{m.strong_tired_insect_pop()}</Button>
+				<Button variant="livid" href="/quizz">{m.strong_tired_insect_pop()}</Button>
 			</div>
 		</div>
 	</section>
@@ -114,9 +114,15 @@
 				<Button>{m.antsy_quaint_hawk_fall()}</Button>
 			</div>
 		</div>
-		<div class="absolute bottom-[-2rem] left-[-7rem] h-64 w-64 rounded-full border border-white" />
-		<div class="absolute right-[-3rem] top-[-3rem] h-44 w-44 rounded-full border border-white" />
-		<div class="absolute bottom-[-6rem] right-[6rem] h-44 w-44 rounded-full border border-white" />
+		<div
+			class="absolute bottom-[-2rem] left-[-7rem] h-64 w-64 rounded-full border border-white"
+		></div>
+		<div
+			class="absolute right-[-3rem] top-[-3rem] h-44 w-44 rounded-full border border-white"
+		></div>
+		<div
+			class="absolute bottom-[-6rem] right-[6rem] h-44 w-44 rounded-full border border-white"
+		></div>
 	</section>
 
 	<footer class="relative z-10 bg-emerald-950 px-8 py-8">
