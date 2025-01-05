@@ -40,7 +40,7 @@
 				<h2 class="mb-6 max-w-xl text-4xl font-bold leading-tight text-emerald-950">
 					{m.tiny_born_yak_spin()}
 				</h2>
-				<Button>{m.awful_wild_flamingo_snip()}</Button>
+				<Button href="/quizz">{m.awful_wild_flamingo_snip()}</Button>
 			</div>
 		</div>
 	</section>
@@ -111,7 +111,7 @@
 				<h2 class="mb-6 max-w-xl text-4xl font-bold leading-tight text-emerald-950">
 					{m.jolly_calm_shrike_devour()}
 				</h2>
-				<Button>{m.antsy_quaint_hawk_fall()}</Button>
+				<Button href="/quizz">{m.antsy_quaint_hawk_fall()}</Button>
 			</div>
 		</div>
 		<div

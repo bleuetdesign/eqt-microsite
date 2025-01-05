@@ -5,7 +5,7 @@
 	type QuestionProps = { header: string; answers: string[] };
 	let questions: QuestionProps[] = $state([
 		{
-			header: "Qu'est-ce qui vous séduit le plus chez Purra Terra?",
+			header: "Qu'est-ce qui vous séduit le plus chez Pura Terra?",
 			answers: ['La beauté des lieux', "L'engagement environnemental", 'Les soins éco-responsables']
 		},
 		{
@@ -21,16 +21,10 @@
 	type AnswerProps = {
 		header: string;
 		explanation: string;
-		icon: 'soins_corps' | 'soins_visage' | 'resultat' | 'ges';
+		icon: 'soins_corps' | 'soins_visage' | 'resultat' | 'thermal';
 	}[];
 	let answers: AnswerProps[] = $state([
 		[
-			{
-				header: 'C’est tellement important pour nous aussi!',
-				icon: 'soins_visage',
-				explanation:
-					'Et grâce à notre innovation unique, nous pouvons contribuer au bien-être de la planète aussi bien qu’à celui des gens.'
-			},
 			{
 				header: 'Nous aussi nous adorons cet endroit!',
 				icon: 'soins_visage',
@@ -38,28 +32,42 @@
 					'Nous n’avons qu’une seule planète, il faut en prendre soin. Et en détoxifiant 2 tonnes de CO2 par jour, Pura Terra vous permet de faire votre part de la façon la plus agréable possible.'
 			},
 			{
-				header: 'Ça tombe bien, vous n’avez pas à vous en préoccuper!',
+				header: 'C’est tellement important pour nous aussi!',
 				icon: 'soins_visage',
-				explanation: `Pura Terra s’en occupe à votre place. Tout ce que vous avez à faire, c’est profiter d’un moment de pure détente dans un cadre enchanteur.`
+				explanation:
+					'Et grâce à notre innovation unique, nous pouvons contribuer au bien-être de la planète aussi bien qu’à celui des gens.'
+			},
+			{
+				header: 'Pour nous aussi, c’était une évidence!',
+				icon: 'soins_visage',
+				explanation: `Et avec son concept unique, Pura Terra va encore plus loin. On ne se contente pas de minimiser notre impact : on purifie littéralement la planète!`
 			}
 		],
 		[
 			{
 				header: "C'est vrai!",
-				icon: 'ges',
+				icon: 'thermal',
 				explanation:
 					'Comment faire une différence sans pour autant se priver? C’est ce qui a donné vie au concept éco-conscient de Pura Terra. Imaginez-vous : en une journée, Pura Terra détoxifie 2 tonnes de CO2!'
 			},
 			{
 				header: 'Vous avez raison!',
-				icon: 'ges',
+				icon: 'thermal',
 				explanation:
 					'Nous n’avons qu’une seule planète, il faut en prendre soin. Et en détoxifiant 2 tonnes de CO2 par jour, Pura Terra vous permet de faire votre part de la façon la plus agréable possible.'
 			},
 			{
 				header: 'Ça tombe bien, vous n’avez pas à vous en préoccuper!',
-				icon: 'ges',
+				icon: 'thermal',
 				explanation: `Pura Terra s’en occupe à votre place. Tout ce que vous avez à faire, c’est profiter d’un moment de pure détente dans un cadre enchanteur.`
+			}
+		],
+		[
+			{
+				header: 'Bonne nouvelle, les soins chez Pura Terra sont tout ça à la fois!',
+				icon: 'soins_visage',
+				explanation:
+					'Bio, vegan, et 100% naturels, ils sont aussi stockés dans des contenants réutilisables, remplis directement chez nos producteurs locaux et n’émettent aucun GES.'
 			}
 		]
 	]);
@@ -79,8 +87,11 @@
 			questions.
 		</button>
 	{:else if questions.length >= answers.length}
-		<Question {...questions[0]} onclick={(i) => responses!.push(i) && answers.shift()} />
+		<Question {...questions[0]} onclick={(i) => responses!.push(i) && questions.shift()} />
 	{:else}
-		<Answer {...answers[0][responses.at(-1)!]} onclick={() => answers.shift()} />
+		<Answer
+			{...answers[0][responses.at(-1)!]}
+			onclick={() => answers.shift() || (location.href = '/equiterre')}
+		/>
 	{/if}
 </main>
