@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { fade, fly } from 'svelte/transition';
 	import Question from '$lib/components/Question.svelte';
 	import Answer from '$lib/components/Answer.svelte';
 
@@ -73,10 +74,7 @@
 	]);
 
 	let responses: null | number[] = $state(null);
-	$inspect(responses).with((_, responses) => {
-		console.log('responses updated:');
-		console.log(responses);
-	});
+	$inspect(responses);
 </script>
 
 <main
@@ -84,7 +82,8 @@
 >
 	{#if responses === null}
 		<button
-			class="max-w-lg text-balance text-center text-3xl text-gray-50"
+			out:fly={{ y: -400 }}
+			class="motion-translate-y-in-150 motion-preset-fade-lg text-balance text-center text-3xl text-gray-50"
 			onclick={() => (responses = [])}
 		>
 			Pour vous inscrire au concours, rien de plus simple: il vous suffit de répondre à 4 petites
