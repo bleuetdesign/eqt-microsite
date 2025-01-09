@@ -10,7 +10,7 @@
 			<div class="text-sm text-gray-200">(À venir)</div>
 		</div>
 		<img src="/logo.svg" alt="" class="h-16" />
-		<div class="font-semibold text-gray-50">
+		<div class="font-semibold text-gray-50 max-sm:hidden">
 			<a href="#">FR</a>
 			<span>&nbsp;|&nbsp;</span>
 			<a href="#">EN</a>
@@ -19,8 +19,9 @@
 </nav>
 
 <main>
+	<!-- hero -->
 	<section style="background-image: url(/hero.png)" class="relative bg-cover px-8 py-8">
-		<img src="/acces_gratuit.png" alt="" class="absolute right-12 top-12" />
+		<img src="/acces_gratuit.png" alt="" class="absolute right-12 top-12 max-md:hidden" />
 		<div class="mx-auto max-w-screen-xl">
 			<div class="my-24 flex flex-col">
 				<h1 class="mb-6 text-5xl text-gray-50">{@html m.hero_title()}</h1>
@@ -31,6 +32,8 @@
 			</div>
 		</div>
 	</section>
+
+	<!-- cta -->
 	<section class="bg-emerald-200 px-8 py-4">
 		<div class="mx-auto max-w-screen-xl rounded-[3rem] border-2 border-emerald-700 p-4">
 			<div class="my-12 flex flex-col items-center gap-y-4 text-balance text-center">
@@ -44,18 +47,23 @@
 			</div>
 		</div>
 	</section>
-	<section class="bg-emerald-50 px-8 py-4">
-		<div class="mx-auto max-w-screen-xl">
-			<div class="my-12 flex items-center">
-				<div class="flex flex-col gap-y-8 text-balance">
+
+	<!-- principe / résultat -->
+	<section class="bg-emerald-50 px-8 py-12">
+		<div class="mx-auto max-w-screen-lg">
+			<!-- faire du bien a la planete -->
+			<div class="flex items-center max-md:justify-center">
+				<div class="flex max-w-lg flex-col gap-y-8 text-balance">
 					<h2 class="mb-6 max-w-2xl text-4xl font-bold leading-tight text-emerald-950">
 						{m.ago_ago_bird_grin()}
 					</h2>
-					<p class="text-lg text-emerald-800">{m.nimble_tangy_marten_persist()}</p>
+					<p class="text-2xl text-emerald-800">{m.nimble_tangy_marten_persist()}</p>
 				</div>
-				<img src="/spa.png" alt="" class="m-8 max-w-[24rem]" />
+				<img src="/spa.png" alt="" class="m-8 max-w-[24rem] max-md:hidden" />
 			</div>
-			<div class="my-12 flex flex-row-reverse items-center">
+
+			<!-- principe -->
+			<div class="flex flex-row-reverse items-center max-md:flex-col-reverse">
 				<div class="flex max-w-lg flex-col">
 					<h2 class="mb-2 text-4xl font-bold leading-tight text-emerald-950">
 						<img src="/principe.svg" alt="" class="mt-[-8px] inline h-12 w-12 p-1" />
@@ -74,10 +82,11 @@
 		</div>
 	</section>
 
+	<!-- nos soins -->
 	<section class="relative z-10 bg-emerald-950 px-8 py-4">
 		<div class="mx-auto max-w-screen-xl">
-			<div class="my-12 flex items-center">
-				<div class="flex flex-col gap-y-8 text-balance text-white">
+			<div class="my-12 flex items-center max-md:flex-col max-md:text-center">
+				<div class="flex flex-col gap-y-8 text-balance text-white max-md:items-center">
 					<h2 class="max-w-2xl text-4xl font-bold leading-tight">{m.glad_quick_termite_feel()}</h2>
 					<p class="text-lg">{m.sad_real_mare_flop()}</p>
 					<ul class="flex size-fit flex-col space-y-4 divide-y divide-gray-300">
@@ -105,7 +114,8 @@
 		</div>
 	</section>
 
-	<section class="relative bg-emerald-200 px-8 py-4">
+	<!-- cta -->
+	<section class="relative overflow-hidden bg-emerald-200 px-8 py-4">
 		<div class="mx-auto max-w-screen-xl p-4">
 			<div class="my-12 flex flex-col items-center gap-y-4 text-balance text-center">
 				<h2 class="mb-6 max-w-xl text-4xl font-bold leading-tight text-emerald-950">
@@ -128,16 +138,18 @@
 	<footer class="relative z-10 bg-emerald-950 px-8 py-8">
 		<div class="mx-auto flex max-w-screen-xl justify-between">
 			<img src="/logo.svg" alt="" class="h-16" />
-			<div class="flex items-center gap-x-12 text-xs text-gray-300">
+			<div
+				class="flex items-center justify-between gap-x-12 px-4 text-center text-xs text-gray-300 max-md:gap-x-4"
+			>
 				<a href="#">{m.game_deft_crab_forgive()}</a>
 				<a href="#">{m.lofty_acidic_seal_pat()}</a>
-				<a href="#">{m.lime_dry_alligator_quell()}</a>
+				<a class="max-sm:hidden" href="#">{m.lime_dry_alligator_quell()}</a>
 			</div>
 			<div class="flex items-center gap-x-6">
-				<div class="rounded-full border border-white">
+				<div class="shrink-0 rounded-full border border-white">
 					<img src="/instagram.svg" alt="" class="h-10 w-10 p-3" />
 				</div>
-				<div class="rounded-full border border-white">
+				<div class="shrink-0 rounded-full border border-white">
 					<img src="/facebook.svg" alt="" class="h-10 w-10 p-3" />
 				</div>
 			</div>

@@ -3,6 +3,10 @@
 @import 'tailwindcss/utilities';
 
 html {
-    font-family: "Barlow", serif;
-    font-synthesis: none;
+  font-family: "Barlow", serif;
+  font-synthesis: none;
+}
+
+* {
+  /* outline: 1px solid red; */
 }
