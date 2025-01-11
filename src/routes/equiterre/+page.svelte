@@ -5,7 +5,7 @@
 <div class="mx-auto max-w-screen-xl">
 	<div class="bg-yellow-50 px-8">
 		<nav>
-			<img src="/equiterre.png" alt="" class="h-20" />
+			<<enhanced:img src="/equiterre.png" alt="" class="h-20" />
 		</nav>
 		<section class="flex flex-col items-center text-balance text-center">
 			<h1 class="mb-8 max-w-2xl text-5xl font-medium leading-snug text-gray-950">
@@ -14,7 +14,7 @@
 			<p class="mb-12 text-2xl">
 				{@html m.quaint_new_panther_beam()}
 			</p>
-			<img src="/arrow-down.svg" alt="" class="mb-8" />
+			<<enhanced:img src="/arrow-down.svg" alt="" class="mb-8" />
 			<hr class="my-8 h-1 w-full border-t border-black" />
 		</section>
 		<section class="my-4 flex">

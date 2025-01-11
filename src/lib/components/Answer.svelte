@@ -6,7 +6,7 @@
 </script>
 
 <div in:fly={{ y: 400, delay: 300 }} out:fly={{ y: -400 }}>
-	<img src={`/${icon}.svg`} alt="" class="mx-auto mb-12 h-20 w-20" />
+	<<enhanced:img src={`/${icon}.svg`} alt="" class="mx-auto mb-12 h-20 w-20" />
 	<h1 class="mx-auto mb-8 max-w-2xl text-balance text-center text-5xl font-medium text-gray-50">
 		{header}
 	</h1>
