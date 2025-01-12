@@ -9,7 +9,7 @@
 			<div class="uppercase text-gray-50">{m.good_warm_jay_hack()}</div>
 			<div class="text-sm text-gray-200">(À venir)</div>
 		</div>
-		<enhanced:img src="/logo.svg" alt="" class="h-16" />
+		<img src="/logo.svg" alt="" class="h-16" />
 		<div class="font-semibold text-gray-50 max-sm:hidden">
 			<a href="#">FR</a>
 			<span>&nbsp;|&nbsp;</span>
@@ -25,7 +25,7 @@
 		style="background: linear-gradient(268.9deg, rgba(0, 0, 0, 0) 31.2%, rgba(0, 0, 0, 0.4) 74.36%), url(/hero.png) center/cover;"
 		class="relative px-8 py-8"
 	>
-		<enhanced:img
+		<img
 			src="/acces_gratuit.png"
 			alt=""
 			class="absolute right-12 top-12 max-md:hidden"
@@ -68,25 +68,25 @@
 					</h2>
 					<p class="max-w-md text-lg text-emerald-900">{m.nimble_tangy_marten_persist()}</p>
 				</div>
-				<enhanced:img src="/spa.png" alt="" class="w-[30rem] py-8 max-md:hidden" />
+				<img src="/spa.png" alt="" class="w-[30rem] py-8 max-md:hidden" />
 			</div>
 
 			<!-- principe -->
 			<div class="flex flex-row-reverse items-center max-md:flex-col-reverse md:justify-between">
 				<div class="flex max-w-lg flex-col">
 					<h2 class="mb-2 text-5xl font-medium leading-tight text-emerald-950">
-						<enhanced:img src="/principe.svg" alt="" class="mt-[-8px] inline h-12 w-12 p-1" />
+						<img src="/principe.svg" alt="" class="mt-[-8px] inline h-12 w-12 p-1" />
 
 						{m.spicy_tangy_bear_grasp()}
 					</h2>
 					<p class="text-lg text-emerald-800">{m.tame_watery_hornet_prosper()}</p>
 					<h2 class="mb-2 mt-16 max-w-lg text-5xl font-medium leading-tight text-emerald-950">
-						<enhanced:img src="/resultat.svg" alt="" class="mt-[-8px] inline h-14 w-14" />
+						<img src="/resultat.svg" alt="" class="mt-[-8px] inline h-14 w-14" />
 						Le résultat
 					</h2>
 					<p class="text-lg text-emerald-800">{m.seemly_careful_weasel_reside()}</p>
 				</div>
-				<enhanced:img src="/ges.svg" alt="" class="m-8 mr-20 w-[30rem]" />
+				<img src="/ges.svg" alt="" class="m-8 mr-20 w-[30rem]" />
 			</div>
 		</div>
 	</section>
@@ -101,14 +101,14 @@
 					<ul class="flex size-fit flex-col space-y-4 divide-y divide-emerald-50">
 						{#each [{ img: '/thermal.svg', text: m.weary_dirty_rook_type() }, { img: '/masso.svg', text: m.tense_fresh_monkey_sail() }, { img: '/soins_corps.svg', text: m.neat_merry_deer_pick() }, { img: '/soins_visage.svg', text: m.honest_broad_otter_favor() }] as { img, text }}
 							<li class="flex w-[28rem] items-center gap-x-12">
-								<enhanced:img src={img} alt="" class="mt-4 h-16 w-16" />
+								<img src={img} alt="" class="mt-4 h-16 w-16" />
 								<p class="pt-4 text-xl font-medium">{text}</p>
 							</li>
 						{/each}
 					</ul>
 					<p class="text-lg">{m.candid_any_elephant_pride()}</p>
 				</div>
-				<enhanced:img src="/lady.png" alt="" class="m-8 w-[32rem]" />
+				<img src="/lady.png" alt="" class="m-8 w-[32rem]" />
 			</div>
 		</div>
 	</section>
@@ -136,7 +136,7 @@
 
 	<footer class="relative z-10 bg-emerald-950 px-8 py-8">
 		<div class="mx-auto flex max-w-screen-xl justify-between">
-			<enhanced:img src="/logo.svg" alt="" class="h-16" />
+			<img src="/logo.svg" alt="" class="h-16" />
 			<div
 				class="flex items-center justify-between gap-x-12 px-4 text-center text-xs text-gray-300 max-md:gap-x-4"
 			>
@@ -146,10 +146,10 @@
 			</div>
 			<div class="flex items-center gap-x-6">
 				<div class="shrink-0 rounded-full border border-white">
-					<enhanced:img src="/instagram.svg" alt="" class="h-10 w-10 p-3" />
+					<img src="/instagram.svg" alt="" class="h-10 w-10 p-3" />
 				</div>
 				<div class="shrink-0 rounded-full border border-white">
-					<enhanced:img src="/facebook.svg" alt="" class="h-10 w-10 p-3" />
+					<img src="/facebook.svg" alt="" class="h-10 w-10 p-3" />
 				</div>
 			</div>
 		</div>

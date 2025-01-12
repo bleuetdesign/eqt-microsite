@@ -1,7 +1,6 @@
 import containerQueries from '@tailwindcss/container-queries';
 import forms from '@tailwindcss/forms';
 import typography from '@tailwindcss/typography';
-import motion from 'tailwindcss-motion';
 import type { Config } from 'tailwindcss';
 
 export default {
@@ -28,10 +27,15 @@ export default {
           '900': '#21403b',
           '950': '#13332f',
         },
-
+        orange: {
+          500: '#FE6A0E',
+        },
+        lime: {
+          200: '#E6F5A6'
+        }
       }
     }
   },
 
-  plugins: [typography, forms, containerQueries, motion]
+  plugins: [typography, forms, containerQueries]
 } satisfies Config;
