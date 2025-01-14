@@ -2,6 +2,7 @@ import containerQueries from '@tailwindcss/container-queries';
 import forms from '@tailwindcss/forms';
 import typography from '@tailwindcss/typography';
 import type { Config } from 'tailwindcss';
+import * as motion from 'tailwindcss-motion'
 
 export default {
   content: ['./src/**/*.{html,js,svelte,ts}'],
@@ -37,5 +38,5 @@ export default {
     }
   },
 
-  plugins: [typography, forms, containerQueries]
+  plugins: [typography, forms, containerQueries, motion]
 } satisfies Config;

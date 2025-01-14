@@ -1,28 +1,53 @@
 <script lang="ts">
 	import * as m from '$lib/paraglide/messages.js';
+	import { fly } from 'svelte/transition';
+	import { cubicOut } from 'svelte/easing';
+
+	let curtain = true;
+	setTimeout(() => (curtain = false), 0);
 </script>
 
+{#if curtain}
+	<div
+		out:fly={{ y: '100%', opacity: 1, duration: 750, easing: cubicOut }}
+		class="-motion-scale-y-in-0 fixed inset-0 top-[50%] z-10 bg-[#1f1f1f]"
+	></div>
+{/if}
 <div>
 	<div class="bg-[#F4F3E6]">
 		<div class="mx-auto max-w-screen-xl px-8">
 			<nav>
-				<img src="/equiterre.png" alt="" class="h-24" />
+				<img
+					src="/equiterre.png"
+					alt=""
+					class="h-24 motion-opacity-in motion-duration-1000 motion-ease-in-out"
+				/>
 			</nav>
 
 			<!-- hero -->
 			<section class="flex flex-col items-center text-balance text-center">
-				<h1 class="mb-8 max-w-4xl text-[3.5rem] font-medium leading-[1.2] text-gray-950">
+				<h1
+					class="motion- mb-8 max-w-4xl text-[3.5rem] font-medium leading-[1.2] text-gray-950 motion-translate-x-in-25 motion-opacity-in motion-duration-1000 motion-ease-in-out"
+				>
 					{@html m.flat_cuddly_alpaca_fond()}
 				</h1>
-				<p class="mb-12 text-2xl">
+				<p
+					class="mb-12 text-2xl motion-translate-y-in-50 motion-opacity-in motion-duration-1000 motion-ease-in-out"
+				>
 					{@html m.quaint_new_panther_beam()}
 				</p>
-				<img src="/arrow-down.svg" alt="" class="mb-4 h-10 w-10" />
-				<hr class="mb-4 mt-8 h-1 w-full border-t border-black" />
+				<img
+					src="/arrow-down.svg"
+					alt=""
+					class="mb-4 h-10 w-10 motion-translate-y-in-150 motion-opacity-in motion-duration-1000 motion-ease-in-out"
+				/>
+				<hr
+					class="mb-4 mt-8 h-1 w-full border-t border-black motion-translate-y-in-[16rem] motion-duration-1000 motion-ease-in-out"
+				/>
 			</section>
 
 			<!-- why -->
-			<section class="flex">
+			<section class="flex motion-translate-y-in-100 motion-duration-1000 motion-ease-in-out">
 				<div class="mt-3 h-5 w-5 shrink-0 rounded-full bg-orange-500"></div>
 				<h2 class="ml-8 max-w-lg text-balance text-4xl font-semibold">
 					{m.mad_soft_crocodile_drum()}
@@ -52,7 +77,7 @@
 							type="email"
 							required
 							autocomplete="email"
-							class="rounded-full border-none px-8 text-lg placeholder:text-gray-600"
+							class="basis-80 rounded-full border-none px-8 text-lg placeholder:text-gray-600"
 						/>
 						<button
 							type="submit"
@@ -67,7 +92,7 @@
 			<!-- 3 years from now -->
 			<section class="flex pb-16">
 				<div class="mt-3 h-5 w-5 shrink-0 rounded-full bg-orange-500"></div>
-				<p class="ml-6 max-w-sm text-xl font-semibold">
+				<p class="ml-6 mr-4 max-w-sm text-xl font-semibold">
 					<strong class="block text-4xl"> D'ici 3 ans, </strong>
 					les gens pourraient être incapables de distinguer ce qui est vrai de ce qui ne l'est pas, selon
 					Horizons de politiques Canada.
@@ -102,7 +127,7 @@
 						type="email"
 						required
 						autocomplete="email"
-						class="rounded-full border-none px-8 text-lg placeholder:text-gray-600"
+						class="basis-80 rounded-full border-none px-8 text-lg placeholder:text-gray-600"
 					/>
 					<button
 						type="submit"

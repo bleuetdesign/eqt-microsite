@@ -13,5 +13,5 @@
 	<p class="mx-auto mb-32 max-w-2xl text-2xl text-gray-100">
 		{explanation}
 	</p>
-	<Button class="w-48" variant="livid" {onclick}>Suivant</Button>
+	<Button class="w-48 px-12" variant="livid" {onclick}>Suivant</Button>
 </div>
