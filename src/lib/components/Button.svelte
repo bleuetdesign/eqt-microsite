@@ -15,7 +15,7 @@
 		{
 			livid: 'bg-emerald-50 text-emerald-950',
 			light: 'bg-emerald-200 text-emerald-950',
-			dark: 'bg-emerald-900 text-emerald-50'
+			dark: 'bg-emerald-950 text-emerald-50'
 		}[variant],
 		classes
 	]}

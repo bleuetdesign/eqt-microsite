@@ -1,20 +1,20 @@
 <script lang="ts">
-	import { fade, fly } from 'svelte/transition';
+	import { fly } from 'svelte/transition';
 	import Question from '$lib/components/Question.svelte';
 	import Answer from '$lib/components/Answer.svelte';
 
 	type QuestionProps = { header: string; answers: string[] };
 	let questions: QuestionProps[] = $state([
 		{
-			header: "Qu'est-ce qui vous séduit le plus chez Pura Terra?",
-			answers: ['La beauté des lieux', "L'engagement environnemental", 'Les soins éco-responsables']
+			header: 'Qu’est-ce qui vous séduit le plus chez Pura Terra?',
+			answers: ['La beauté des lieux', 'L’engagement environnemental', 'Les soins éco-responsables']
 		},
 		{
-			header: "Pour vous, protéger la planète, c'est:",
+			header: 'Pour vous, protéger la planète, c’est:',
 			answers: ['Primordial', 'Difficile', 'Pas important']
 		},
 		{
-			header: "Pour vous, le soin beauté idéal, c'est:",
+			header: 'Pour vous, le soin beauté idéal, c’est:',
 			answers: ['100% naturel', '0 déchet', 'Carboneutre']
 		}
 	]);
@@ -41,7 +41,7 @@
 			{
 				header: 'Pour nous aussi, c’était une évidence!',
 				icon: 'soins_corps',
-				explanation: `Et avec son concept unique, Pura Terra va encore plus loin. On ne se contente pas de minimiser notre impact : on purifie littéralement la planète!`
+				explanation: `Et avec son concept unique, Pura Terra va encore plus loin. On ne se contente pas de minimiser notre impact: on purifie littéralement la planète!`
 			}
 		],
 		[

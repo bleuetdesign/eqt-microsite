@@ -10,10 +10,10 @@
 			<div class="text-sm text-gray-200">(À venir)</div>
 		</div>
 		<img src="/logo.svg" alt="" class="h-16" />
-		<div class="font-semibold text-gray-50 max-sm:hidden">
+		<div class="font-medium text-gray-50 max-sm:hidden">
 			<a href="#">FR</a>
 			<span>&nbsp;|&nbsp;</span>
-			<a href="#">EN</a>
+			<a href="#" class="font-normal text-gray-300">EN</a>
 		</div>
 	</div>
 </nav>
@@ -37,7 +37,7 @@
 				<p class="mb-12 max-w-72 text-xl font-medium text-gray-200">
 					{m.loose_tidy_panda_praise()}
 				</p>
-				<Button variant="light" href="/quizz">{m.strong_tired_insect_pop()}</Button>
+				<Button variant="light" class="px-12" href="/quizz">{m.strong_tired_insect_pop()}</Button>
 			</div>
 		</div>
 	</section>
