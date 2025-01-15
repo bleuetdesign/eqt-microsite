@@ -52,7 +52,7 @@
 				<h2 class="mb-6 max-w-xl text-4xl font-bold leading-tight text-emerald-950">
 					{m.tiny_born_yak_spin()}
 				</h2>
-				<Button href="/quizz">{m.awful_wild_flamingo_snip()}</Button>
+				<Button class="px-12" href="/quizz">{m.awful_wild_flamingo_snip()}</Button>
 			</div>
 		</div>
 	</section>
@@ -120,7 +120,7 @@
 				<h2 class="mb-6 max-w-3xl text-[2.75rem] font-medium leading-tight text-emerald-950">
 					{m.jolly_calm_shrike_devour()}
 				</h2>
-				<Button href="/quizz">{m.antsy_quaint_hawk_fall()}</Button>
+				<Button class="px-12" href="/quizz">{m.antsy_quaint_hawk_fall()}</Button>
 			</div>
 		</div>
 		<div
@@ -145,12 +145,20 @@
 				<a class="max-sm:hidden" href="#">{m.lime_dry_alligator_quell()}</a>
 			</div>
 			<div class="flex items-center gap-x-6">
-				<div class="shrink-0 rounded-full border border-white">
+				<a
+					target="_blank"
+					href="https://www.instagram.com/spapuraterra/"
+					class="shrink-0 rounded-full border border-white"
+				>
 					<img src="/instagram.svg" alt="" class="h-10 w-10 p-3" />
-				</div>
-				<div class="shrink-0 rounded-full border border-white">
+				</a>
+				<a
+					target="_blank"
+					href="https://www.facebook.com/profile.php?id=61569693614614"
+					class="shrink-0 rounded-full border border-white"
+				>
 					<img src="/facebook.svg" alt="" class="h-10 w-10 p-3" />
-				</div>
+				</a>
 			</div>
 		</div>
 	</footer>

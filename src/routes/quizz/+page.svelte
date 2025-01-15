@@ -1,10 +1,9 @@
 <script lang="ts">
 	import { fly } from 'svelte/transition';
-	import Question from '$lib/components/Question.svelte';
-	import Answer from '$lib/components/Answer.svelte';
-
-	type QuestionProps = { header: string; answers: string[] };
-	let questions: QuestionProps[] = $state([
+	import { Button } from '$lib/components';
+	import { goto } from '$app/navigation';
+	type Question = { header: string; answers: string[] };
+	let questions: Question[] = $state([
 		{
 			header: 'Qu’est-ce qui vous séduit le plus chez Pura Terra?',
 			answers: ['La beauté des lieux', 'L’engagement environnemental', 'Les soins éco-responsables']
@@ -16,15 +15,19 @@
 		{
 			header: 'Pour vous, le soin beauté idéal, c’est:',
 			answers: ['100% naturel', '0 déchet', 'Carboneutre']
+		},
+		{
+			header: 'Est-ce que Pura Terra vous semble un peu trop beau pour être vrai?',
+			answers: ['Oui', 'Juste un peu, mettons', 'Maintenant que vous le dites...']
 		}
 	]);
 
-	type AnswerProps = {
+	type Answer = {
 		header: string;
 		explanation: string;
 		icon: 'soins_corps' | 'soins_visage' | 'resultat' | 'thermal';
-	}[];
-	let answers: AnswerProps[] = $state([
+	};
+	let answers: Answer[][] = $state([
 		[
 			{
 				header: 'Nous aussi nous adorons cet endroit!',
@@ -73,38 +76,76 @@
 		]
 	]);
 
-	let responses: undefined | null | number[] = $state();
-	$inspect(responses);
+	let questionData = $derived(questions[0]);
+	let answerIdx = $state(-1);
+	let answerData = $derived(answers[0][answerIdx % answers[0].length]);
+	$inspect(questions, answers);
 
 	setTimeout(() => {
-		responses = null;
+		answerIdx = -1;
 	});
 	setTimeout(() => {
-		responses = [];
-	}, 3000);
+		if (answerIdx < 0) answerIdx = 0;
+	}, 5000);
 </script>
 
 <main
 	class="relative flex min-h-screen w-screen flex-col items-center justify-center text-balance bg-emerald-950 p-16 text-center"
 >
-	{#if responses === undefined}
-		<!-- trigger fly in -->
-	{:else if responses === null}
-		<button
-			in:fly={{ y: 400 }}
+	{#if answerIdx === -1}
+		<div
+			class="motion-translate-y-in-150 motion-opacity-in motion-duration-1000"
 			out:fly={{ y: -400 }}
-			class="motion-preset-fade-lg text-balance text-center text-3xl text-gray-50 motion-translate-y-in-150"
-			onclick={() => (responses = [])}
 		>
-			Pour vous inscrire au concours, rien de plus simple: il vous suffit de répondre à 4 petites
-			questions.
-		</button>
-	{:else if questions.length >= answers.length}
-		<Question {...questions[0]} onclick={(i) => responses!.push(i) && questions.shift()} />
+			<button
+				class="text-balance text-center text-3xl text-gray-50"
+				onclick={() => (answerIdx = -1)}
+			>
+				Pour vous inscrire au concours, rien de plus simple: il vous suffit de répondre à 4 petites
+				questions.
+			</button>
+			<Button variant="livid" onclick={() => (answerIdx = 0)} class="mt-12">Suivant</Button>
+		</div>
+	{:else if questions.length > answers.length}
+		{@render question(questionData)}
 	{:else}
-		<Answer
-			{...answers[0][answers[0].length === 1 ? 0 : responses.at(-1)!]}
-			onclick={() => answers.shift() && responses?.length === 3 && (location.href = '/equiterre')}
-		/>
+		{@render answer(answerData)}
 	{/if}
 </main>
+
+{#snippet question(q: Question)}
+	<div in:fly={{ y: 400, delay: 400 }} out:fly={{ y: -400 }}>
+		<h1 class="mx-auto mb-16 w-full max-w-2xl text-5xl font-medium leading-tight text-gray-50">
+			{q.header}
+		</h1>
+		<div class="flex justify-center gap-x-8">
+			{#each q.answers as answer, i}
+				<Button
+					class="basis-72"
+					variant="livid"
+					onclick={() => {
+						if (!answers.length) {
+							goto('/equiterre');
+						} else {
+							questions.shift();
+							answerIdx = i;
+						}
+					}}>{answer}</Button
+				>
+			{/each}
+		</div>
+	</div>
+{/snippet}
+
+{#snippet answer(a: Answer)}
+	<div in:fly={{ y: 400, delay: 300 }} out:fly={{ y: -400 }}>
+		<img src={`/${a.icon}.svg`} alt="" class="mx-auto mb-12 h-32 w-32" />
+		<h1 class="mx-auto mb-8 max-w-2xl text-balance text-center text-5xl font-medium text-gray-50">
+			{a.header}
+		</h1>
+		<p class="mx-auto mb-32 max-w-2xl text-2xl text-gray-100">
+			{a.explanation}
+		</p>
+		<Button class="w-48 px-12" variant="livid" onclick={() => answers.shift()}>Suivant</Button>
+	</div>
+{/snippet}
