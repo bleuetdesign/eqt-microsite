@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Button from '$lib/components/Button.svelte';
+	import { Button } from '$lib/components';
 	import * as m from '$lib/paraglide/messages.js';
 </script>
 
@@ -11,9 +11,9 @@
 		</div>
 		<img src="/logo.svg" alt="" class="h-16" />
 		<div class="font-medium text-gray-50 max-sm:hidden">
-			<a href="#">FR</a>
+			<span>FR</span>
 			<span>&nbsp;|&nbsp;</span>
-			<a href="#" class="font-normal text-gray-300">EN</a>
+			<span class="font-normal text-gray-300">EN</span>
 		</div>
 	</div>
 </nav>

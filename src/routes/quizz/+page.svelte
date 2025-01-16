@@ -2,6 +2,7 @@
 	import { fly } from 'svelte/transition';
 	import { Button } from '$lib/components';
 	import { goto } from '$app/navigation';
+
 	type Question = { header: string; answers: string[] };
 	let questions: Question[] = $state([
 		{
@@ -79,14 +80,9 @@
 	let questionData = $derived(questions[0]);
 	let answerIdx = $state(-1);
 	let answerData = $derived(answers[0][answerIdx % answers[0].length]);
-	$inspect(questions, answers);
 
-	setTimeout(() => {
-		answerIdx = -1;
-	});
-	setTimeout(() => {
-		if (answerIdx < 0) answerIdx = 0;
-	}, 5000);
+	setTimeout(() => (answerIdx = -1));
+	setTimeout(() => answerIdx < 0 && (answerIdx = 0), 5000);
 </script>
 
 <main
@@ -94,7 +90,7 @@
 >
 	{#if answerIdx === -1}
 		<div
-			class="motion-translate-y-in-150 motion-opacity-in motion-duration-1000"
+			class="motion-duration-250 flex flex-col items-center gap-y-4 motion-translate-y-in-150 motion-opacity-in"
 			out:fly={{ y: -400 }}
 		>
 			<button
