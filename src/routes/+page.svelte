@@ -110,7 +110,9 @@
 	<!-- nos soins -->
 	<section class="relative z-10 bg-emerald-950 px-16 py-4">
 		<div class="mx-auto w-full max-w-screen-xl">
-			<div class="my-12 flex items-center justify-between max-lg:flex-col max-lg:text-center">
+			<div
+				class="my-12 flex items-center justify-between max-lg:flex-col-reverse max-lg:text-center"
+			>
 				<div class="flex flex-col gap-y-8 text-balance text-white max-lg:items-center">
 					<h2 class="w-fit text-5xl font-medium leading-tight">{m.glad_quick_termite_feel()}</h2>
 					<p class="max-w-md text-xl">{m.sad_real_mare_flop()}</p>
@@ -124,10 +126,10 @@
 					</ul>
 					<p class="max-w-lg text-lg">{m.candid_any_elephant_pride()}</p>
 				</div>
-				<img
-					src="/lady.png"
+				<enhanced:img
+					src="./lady.png"
 					alt=""
-					class="mx-8 my-16 block w-96 shrink lg:w-full lg:basis-[32rem]"
+					class="mx-8 mb-16 block w-96 shrink lg:my-16 lg:w-[32rem]"
 				/>
 			</div>
 		</div>
