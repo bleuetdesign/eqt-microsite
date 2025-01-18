@@ -22,40 +22,8 @@
 	{@render children()}
 </ParaglideJS>
 
-<style>
-	@keyframes fade-in {
-		from {
-			opacity: 0;
-		}
-	}
-
-	@keyframes fade-out {
-		to {
-			opacity: 0;
-		}
-	}
-
-	@keyframes slide-from-bottom {
-		from {
-			transform: translateY(100vh);
-		}
-	}
-
-	@keyframes slide-to-top {
-		to {
-			transform: translateY(-100vh);
-		}
-	}
-
-	:root::view-transition-old(root) {
-		animation:
-			/* 500ms cubic-bezier(0.4, 0, 1, 1) both fade-out, */ 300ms
-			cubic-bezier(0.4, 0, 0.2, 1) both slide-to-top;
-	}
-
-	:root::view-transition-new(root) {
-		animation:
-			/* 210ms cubic-bezier(0, 0, 0.2, 1) 500ms both fade-in, */ 300ms
-			cubic-bezier(0.4, 0, 0.2, 1) both slide-from-bottom;
+<style lang="postcss">
+	:global(#hs_show_banner_button) {
+		@apply fixed bottom-8 right-8 z-10 !rounded-full !bg-emerald-950 !text-emerald-50;
 	}
 </style>

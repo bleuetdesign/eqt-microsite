@@ -47,7 +47,7 @@
 			<!-- hero -->
 			<section class="flex flex-col items-center text-balance text-center">
 				<h1
-					class="my-8 max-w-4xl text-[3.5rem] font-medium leading-[1.2] text-gray-950 motion-translate-x-in-25 motion-opacity-in motion-duration-1000 motion-ease-in-out"
+					class="my-8 max-w-4xl text-[3.5rem] font-medium leading-[1.2] text-gray-950 motion-translate-x-in-25 motion-opacity-in motion-duration-1000 motion-ease-in-out max-sm:text-5xl"
 				>
 					{@html m.flat_cuddly_alpaca_fond()}
 				</h1>
@@ -67,9 +67,11 @@
 			</section>
 
 			<!-- why -->
-			<section class="flex motion-translate-y-in-100 motion-duration-1000 motion-ease-in-out">
-				<div class="mt-3 h-5 w-5 shrink-0 rounded-full bg-orange-500"></div>
-				<h2 class="ml-8 mr-4 max-w-lg text-balance text-4xl font-semibold">
+			<section
+				class="flex motion-translate-y-in-100 motion-duration-1000 motion-ease-in-out max-sm:flex-wrap"
+			>
+				<div class="mt-3 h-5 w-5 shrink-0 rounded-full bg-orange-500 max-sm:hidden"></div>
+				<h2 class="mb-4 mr-4 max-w-lg text-balance text-4xl font-semibold sm:ml-8">
 					{m.mad_soft_crocodile_drum()}
 				</h2>
 				<div class="flex-grow"></div>
@@ -113,15 +115,15 @@
 			<hr class="my-4 h-1 w-full border-t border-black" />
 
 			<!-- 3 years from now -->
-			<section class="flex pb-16">
-				<div class="mt-3 h-5 w-5 shrink-0 rounded-full bg-orange-500"></div>
-				<p class="ml-6 mr-4 max-w-sm text-xl font-semibold">
+			<section class="flex pb-16 max-sm:flex-col">
+				<div class="mt-3 h-5 w-5 shrink-0 rounded-full bg-orange-500 max-sm:hidden"></div>
+				<p class="mr-4 max-w-sm text-xl font-semibold sm:ml-6">
 					<strong class="block text-4xl"> D’ici 3 ans, </strong>
 					les gens pourraient être incapables de distinguer ce qui est vrai de ce qui ne l'est pas, selon
 					Horizons de politiques Canada.
 				</p>
 				<div class="flex-grow"></div>
-				<div class="max-w-lg text-2xl">
+				<div class="max-w-lg text-2xl max-sm:mt-4">
 					<p>
 						<strong>Bien s’informer est plus important que jamais.</strong>
 					</p>
@@ -137,9 +139,11 @@
 
 	<!-- newsletter signup -->
 	<div class="bg-dark bg-[#1f1f1f]">
-		<section class="mx-auto max-w-screen-xl flex-col items-center justify-center gap-y-8 py-48">
+		<section
+			class="mx-auto max-w-screen-xl flex-col items-center justify-center gap-y-8 px-4 py-48"
+		>
 			<h2
-				class="mb-8 text-balance text-center text-[2.5rem] font-medium leading-tight text-lime-200"
+				class="mb-8 text-balance text-center text-[2.5rem] font-medium leading-tight text-lime-200 max-sm:text-4xl"
 			>
 				En vérifiant l’information,<br /> Équiterre vous aide à distinguer le vrai du faux.
 			</h2>

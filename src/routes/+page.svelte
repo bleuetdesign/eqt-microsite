@@ -1,6 +1,22 @@
 <script lang="ts">
 	import { Button } from '$lib/components';
 	import * as m from '$lib/paraglide/messages.js';
+
+	import { onMount } from 'svelte';
+
+	onMount(() => {
+		if (typeof window === undefined) return;
+		(function (w, d, s, l, i) {
+			w[l] = w[l] || [];
+			w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+			var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s),
+				dl = l != 'dataLayer' ? '&l=' + l : '';
+			j.async = true;
+			j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+			f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-TSKNTT5G');
+	});
 </script>
 
 <nav class="bg-emerald-950 px-8 py-4">
@@ -22,11 +38,11 @@
 	<!-- hero -->
 	<!-- TODO: compress img -->
 	<section
-		style="background: linear-gradient(268.9deg, rgba(0, 0, 0, 0) 31.2%, rgba(0, 0, 0, 0.4) 74.36%), url(/hero.png) center/cover;"
+		style="background: linear-gradient(268.9deg, rgba(0, 0, 0, 0) 31.2%, rgba(0, 0, 0, 0.4) 74.36%), url(/hero.webp) center/cover; background-position: 80% 100%"
 		class="relative px-8 py-8"
 	>
-		<img
-			src="/acces_gratuit.png"
+		<enhanced:img
+			src="./acces_gratuit.png"
 			alt=""
 			class="absolute right-12 top-12 max-md:hidden"
 			fetchpriority="high"
@@ -61,18 +77,18 @@
 	<section class="bg-emerald-50 px-8 py-12">
 		<div class="mx-auto w-full max-w-screen-lg">
 			<!-- faire du bien a la planete -->
-			<div class="flex items-center justify-between max-md:justify-center">
+			<div class="flex items-center justify-between max-lg:justify-center">
 				<div class="flex max-w-lg flex-col gap-y-8 text-balance">
 					<h2 class="mb-6 max-w-2xl text-[2.75rem] font-medium leading-[1.125] text-emerald-950">
 						{m.ago_ago_bird_grin()}
 					</h2>
 					<p class="max-w-md text-lg text-emerald-900">{m.nimble_tangy_marten_persist()}</p>
 				</div>
-				<img src="/spa.png" alt="" class="w-[30rem] py-8 max-md:hidden" />
+				<enhanced:img src="./spa.png" alt="" class="w-[30rem] py-8 max-lg:hidden" />
 			</div>
 
 			<!-- principe -->
-			<div class="flex flex-row-reverse items-center max-md:flex-col-reverse md:justify-between">
+			<div class="flex flex-row-reverse items-center max-lg:flex-col-reverse lg:justify-between">
 				<div class="flex max-w-lg flex-col">
 					<h2 class="mb-2 text-5xl font-medium leading-tight text-emerald-950">
 						<img src="/principe.svg" alt="" class="mt-[-8px] inline h-12 w-12 p-1" />
@@ -86,7 +102,7 @@
 					</h2>
 					<p class="text-lg text-emerald-800">{m.seemly_careful_weasel_reside()}</p>
 				</div>
-				<img src="/ges.svg" alt="" class="m-8 mr-20 w-[30rem]" />
+				<enhanced:img src="./ges.svg" alt="" class="m-8 md:mr-20 md:w-[30rem]" />
 			</div>
 		</div>
 	</section>
@@ -94,21 +110,25 @@
 	<!-- nos soins -->
 	<section class="relative z-10 bg-emerald-950 px-16 py-4">
 		<div class="mx-auto w-full max-w-screen-xl">
-			<div class="my-12 flex items-center justify-between max-lg:flex-col max-md:text-center">
-				<div class="flex flex-col gap-y-8 text-balance text-white max-md:items-center">
-					<h2 class="text-5xl font-medium leading-tight">{m.glad_quick_termite_feel()}</h2>
+			<div class="my-12 flex items-center justify-between max-lg:flex-col max-lg:text-center">
+				<div class="flex flex-col gap-y-8 text-balance text-white max-lg:items-center">
+					<h2 class="w-fit text-5xl font-medium leading-tight">{m.glad_quick_termite_feel()}</h2>
 					<p class="max-w-md text-xl">{m.sad_real_mare_flop()}</p>
 					<ul class="flex size-fit flex-col space-y-4 divide-y divide-emerald-50">
 						{#each [{ img: '/thermal.svg', text: m.weary_dirty_rook_type() }, { img: '/masso.svg', text: m.tense_fresh_monkey_sail() }, { img: '/soins_corps.svg', text: m.neat_merry_deer_pick() }, { img: '/soins_visage.svg', text: m.honest_broad_otter_favor() }] as { img, text }}
-							<li class="flex w-[28rem] items-center gap-x-12">
+							<li class="flex w-[28rem] items-center gap-x-12 max-lg:justify-center">
 								<img src={img} alt="" class="mt-4 h-16 w-16" />
 								<p class="pt-4 text-xl font-medium">{text}</p>
 							</li>
 						{/each}
 					</ul>
-					<p class="text-lg">{m.candid_any_elephant_pride()}</p>
+					<p class="max-w-lg text-lg">{m.candid_any_elephant_pride()}</p>
 				</div>
-				<img src="/lady.png" alt="" class="m-8 w-[32rem]" />
+				<img
+					src="/lady.png"
+					alt=""
+					class="mx-8 my-16 block w-96 shrink lg:w-full lg:basis-[32rem]"
+				/>
 			</div>
 		</div>
 	</section>
