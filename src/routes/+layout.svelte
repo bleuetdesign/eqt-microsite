@@ -23,6 +23,10 @@
 </ParaglideJS>
 
 <style lang="postcss">
+	:global(:root) {
+		@apply max-sm:text-[80%];
+	}
+
 	:global(#hs_show_banner_button) {
 		@apply fixed bottom-8 right-8 z-10 !rounded-full !bg-emerald-950 !text-emerald-50;
 	}

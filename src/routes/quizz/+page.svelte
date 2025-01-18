@@ -86,7 +86,7 @@
 </script>
 
 <main
-	class="relative flex min-h-screen w-screen flex-col items-center justify-center text-balance bg-emerald-950 p-16 text-center"
+	class="relative flex min-h-screen w-screen flex-col items-center justify-center text-balance bg-emerald-950 p-4 text-center lg:p-16"
 >
 	{#if answerIdx === -1}
 		<div
@@ -114,10 +114,10 @@
 		<h1 class="mx-auto mb-16 w-full max-w-2xl text-5xl font-medium leading-tight text-gray-50">
 			{q.header}
 		</h1>
-		<div class="flex justify-center gap-x-8">
+		<div class="flex justify-center gap-8 max-lg:flex-col max-lg:items-center">
 			{#each q.answers as answer, i}
 				<Button
-					class="basis-72"
+					class="lg:basis-72"
 					variant="livid"
 					onclick={() => {
 						if (!answers.length) {
