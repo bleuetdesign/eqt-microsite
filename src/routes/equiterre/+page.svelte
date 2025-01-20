@@ -93,15 +93,14 @@
 			<hr class="my-8 h-1 w-full border-t border-black" />
 
 			<!-- video -->
-			<section class="flex">
-				<div class="mt-3 h-5 w-5 shrink-0 rounded-full bg-orange-500"></div>
-				<h2 class="ml-8 mr-4 max-w-lg text-balance text-4xl font-semibold">
+			<section class="flex max-lg:flex-wrap">
+				<div class="mr-8 mt-3 h-5 w-5 shrink-0 rounded-full bg-orange-500 max-lg:hidden"></div>
+				<h2 class="mb-8 mr-4 max-w-lg text-balance text-4xl font-semibold">
 					Équiterre vous dévoile comment cette fausse publicité a été créée et vous donne les outils
 					pour détecter la désinformation qui s’y cache.
 				</h2>
-				<div class="grow">
-					<div class="mb-12 aspect-video bg-gray-900"></div>
-				</div>
+				<video controls src="/desinformation.webm" class="mb-4 aspect-video w-full grow bg-gray-900"
+				></video>
 			</section>
 			<hr class="my-8 h-1 w-full border-t border-black" />
 
@@ -118,7 +117,7 @@
 			<section class="flex pb-16 max-sm:flex-col">
 				<div class="mt-3 h-5 w-5 shrink-0 rounded-full bg-orange-500 max-sm:hidden"></div>
 				<p class="mr-4 max-w-sm text-xl font-semibold sm:ml-6">
-					<strong class="block text-4xl"> D’ici 3 ans, </strong>
+					<strong class="block text-4xl"> D’ici 2 ans, </strong>
 					les gens pourraient être incapables de distinguer ce qui est vrai de ce qui ne l'est pas, selon
 					Horizons de politiques Canada.
 				</p>
