@@ -2,13 +2,11 @@
 	import * as m from '$lib/paraglide/messages.js';
 	import { fly } from 'svelte/transition';
 	import { cubicOut } from 'svelte/easing';
-
 	let curtain = true;
 	setTimeout(() => (curtain = false), 0);
 </script>
 
 <svelte:head>
-	<!-- Start of HubSpot Embed Code -->
 	<script
 		type="text/javascript"
 		id="hs-script-loader"
@@ -16,11 +14,15 @@
 		defer
 		src="//js.hs-scripts.com/21537648.js"
 	></script>
-	<!-- End of HubSpot Embed Code -->
-
 	<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
 	<script>
-		hbspt.forms.create({
+		window.hbspt.forms.create({
+			target: '#hs-form',
+			portalId: '21537648',
+			formId: '793bfe68-5ba3-4382-b211-8f4aa30424b8'
+		});
+		window.hbspt.forms.create({
+			target: '#hs-form2',
 			portalId: '21537648',
 			formId: '793bfe68-5ba3-4382-b211-8f4aa30424b8'
 		});
@@ -109,7 +111,7 @@
 				<h2 class="mb-16 text-balance text-center text-4xl font-semibold">
 					{m.shy_same_anteater_comfort()}
 				</h2>
-				{@render newsletterForm()}
+				<div class="mx-auto max-w-screen-xl p-4" id="hs-form"></div>
 			</section>
 			<hr class="my-4 h-1 w-full border-t border-black" />
 
@@ -146,54 +148,39 @@
 			>
 				En vérifiant l’information,<br /> Équiterre vous aide à distinguer le vrai du faux.
 			</h2>
-			{@render newsletterForm()}
+			<div class="mx-auto max-w-screen-xl p-4" id="hs-form2"></div>
 		</section>
 	</div>
 </div>
 
-{#snippet newsletterForm()}
-	<form id="793bfe68-5ba3-4382-b211-8f4aa30424b8">
-		<div class="mx-auto grid max-w-xs grid-cols-2 justify-center gap-3">
-			<input
-				placeholder="Entrez votre courriel"
-				type="email"
-				name="email"
-				required
-				autocomplete="email"
-				class="col-span-full basis-80 rounded-xl border-none px-4 text-sm placeholder:text-gray-600"
-			/>
-			<input
-				placeholder="Prénom"
-				name="firstname"
-				required
-				autocomplete="given-name"
-				class="basis-80 rounded-xl border-none px-4 text-sm placeholder:text-gray-600"
-			/>
-			<input
-				placeholder="Nom de famille"
-				name="lastname"
-				required
-				autocomplete="family-name"
-				class="basis-80 rounded-xl border-none px-4 text-sm placeholder:text-gray-600"
-			/>
-			<div class="col-span-full">
-				<label class="flex items-center gap-2">
-					<input type="checkbox" required class="h-4 w-4 rounded border-gray-300" />
-					<span class="text-sm text-gray-700">Je consens à recevoir des nouvelles d’Équiterre</span>
-				</label>
-			</div>
-
-			<button
-				type="submit"
-				class="col-span-full mt-4 justify-self-center rounded-full bg-orange-500 px-8 py-4 text-xl font-semibold text-white"
-				>Je veux savoir</button
-			>
-		</div>
-	</form>
-{/snippet}
-
 <style lang="postcss">
-	:global(.bg-dark) label span {
+	:global(.bg-dark label) {
 		@apply text-lime-200;
+	}
+	:global(.bg-dark .submitted-message) {
+		@apply text-lime-200;
+	}
+	:global(.submitted-message) {
+		@apply mx-auto;
+	}
+
+	:global(form) {
+		@apply mx-auto grid max-w-lg grid-cols-2 justify-center gap-3;
+	}
+
+	:global(input[type='email']),
+	:global(input[type='text']) {
+		@apply w-full rounded-xl border-none px-4 text-sm placeholder:text-gray-600;
+	}
+	:global(.hs-email),
+	:global(.legal-consent-container),
+	:global(.hs-submit) {
+		@apply col-span-full;
+	}
+	:global(input[type='checkbox']) {
+		@apply mr-2 mt-1 h-4 w-4 rounded border-gray-300;
+	}
+	:global(.hs-submit) {
+		@apply mt-4 justify-self-center rounded-full bg-orange-500 px-8 py-4 text-xl font-semibold text-white;
 	}
 </style>
