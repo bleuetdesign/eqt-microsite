@@ -42,7 +42,7 @@
 		class="relative px-8 py-8"
 	>
 		<enhanced:img
-			src="./acces_gratuit.png"
+			src="./acces_gratuit.svg"
 			alt=""
 			class="absolute right-12 top-12 max-md:hidden"
 			fetchpriority="high"
@@ -102,7 +102,7 @@
 					</h2>
 					<p class="text-lg text-emerald-800">{m.seemly_careful_weasel_reside()}</p>
 				</div>
-				<enhanced:img src="./ges.svg" alt="" class="m-8 md:mr-20 md:w-[30rem]" />
+				<enhanced:img src="./ges.svg" alt="" class="m-8 w-96 md:mr-20 md:w-[30rem]" />
 			</div>
 		</div>
 	</section>
@@ -129,7 +129,7 @@
 				<enhanced:img
 					src="./lady.png"
 					alt=""
-					class="mx-8 mb-16 block w-96 shrink lg:my-16 lg:w-[32rem]"
+					class="mx-auto mb-16 block w-96 shrink lg:mx-8 lg:my-16 lg:w-[32rem]"
 				/>
 			</div>
 		</div>
@@ -139,10 +139,10 @@
 	<section class="relative overflow-hidden bg-emerald-200 px-8 py-4">
 		<div class="mx-auto max-w-screen-xl p-4">
 			<div class="my-12 flex flex-col items-center gap-y-4 text-balance text-center">
-				<h2 class="mb-6 max-w-3xl text-[2.75rem] font-medium leading-tight text-emerald-950">
+				<h2 class="z-20 mb-6 max-w-3xl text-[2.75rem] font-medium leading-tight text-emerald-950">
 					{m.jolly_calm_shrike_devour()}
 				</h2>
-				<Button class="px-12" href="/quizz">{m.antsy_quaint_hawk_fall()}</Button>
+				<Button class="z-20 px-12" href="/quizz">{m.antsy_quaint_hawk_fall()}</Button>
 			</div>
 		</div>
 		<div
@@ -185,3 +185,9 @@
 		</div>
 	</footer>
 </main>
+
+<style lang="postcss">
+	:global(#hs_show_banner_button) {
+		@apply !border-emerald-50;
+	}
+</style>

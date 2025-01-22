@@ -23,8 +23,8 @@
 </ParaglideJS>
 
 <style lang="postcss">
-	:global(:root) {
-		@apply max-sm:text-[80%];
+	:global(:root) :not(p) {
+		@apply max-sm:text-[90%];
 	}
 
 	:global(#hs_show_banner_button) {

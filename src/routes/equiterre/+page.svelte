@@ -35,7 +35,7 @@
 		<div class="mx-auto max-w-screen-xl px-8">
 			<nav>
 				<img
-					src="/equiterre.png"
+					src="/equiterre.svg"
 					alt=""
 					class="h-24 motion-opacity-in motion-duration-1000 motion-ease-in-out"
 				/>
