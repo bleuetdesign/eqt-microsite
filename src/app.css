@@ -7,7 +7,7 @@ html {
 	font-synthesis: none;
 }
 
-#hs_eu_cookie_consent_banner {
+#hs-banner-parent {
 	font-family: 'Barlow', serif;
 	inset: none;
 	@apply bottom-8 right-8 border-emerald-50 text-lg shadow-none;
