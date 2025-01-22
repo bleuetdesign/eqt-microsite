@@ -7,14 +7,14 @@ html {
 	font-synthesis: none;
 }
 
-#hs-banner-parent {
-	font-family: 'Barlow', serif;
-	inset: none;
-	@apply bottom-8 right-8 border-emerald-50 text-lg shadow-none;
+#hs-eu-cookie-confirmation {
+	font-family: 'Barlow', serif !important;
+	inset: none !important;
+	@apply !bottom-8 !right-8 !border-emerald-50 !text-lg !shadow-none;
 }
 
 #hs-eu-confirmation-button {
-	@apply rounded-full bg-emerald-950 font-medium text-emerald-50;
+	@apply !rounded-full !bg-emerald-950 !font-medium !text-emerald-50;
 }
 
 @keyframes fade-in {
