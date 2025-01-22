@@ -38,7 +38,7 @@
 	<!-- hero -->
 	<!-- TODO: compress img -->
 	<section
-		style="background: linear-gradient(268.9deg, rgba(0, 0, 0, 0) 31.2%, rgba(0, 0, 0, 0.4) 74.36%), url(/hero.webp) center/cover; background-position: 80% 100%"
+		style="background: linear-gradient(268.9deg, rgba(0, 0, 0, 0) 31.2%, rgba(0, 0, 0, 0.4) 74.36%), url(/hero.webp) center/cover; background-position: center"
 		class="relative px-8 py-8"
 	>
 		<enhanced:img
@@ -102,7 +102,7 @@
 					</h2>
 					<p class="text-lg text-emerald-800">{m.seemly_careful_weasel_reside()}</p>
 				</div>
-				<enhanced:img src="./ges.svg" alt="" class="m-8 w-96 md:mr-20 md:w-[30rem]" />
+				<enhanced:img src="./ges.svg" alt="" class="m-8 w-96 lg:mr-20 lg:w-[30rem]" />
 			</div>
 		</div>
 	</section>
