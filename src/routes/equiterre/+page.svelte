@@ -49,7 +49,7 @@
 					{@html m.flat_cuddly_alpaca_fond()}
 				</h1>
 				<p
-					class="mb-12 text-2xl motion-translate-y-in-50 motion-opacity-in motion-duration-1000 motion-ease-in-out"
+					class="mb-12 max-w-2xl text-2xl motion-translate-y-in-50 motion-opacity-in motion-duration-1000 motion-ease-in-out"
 				>
 					{@html m.quaint_new_panther_beam()}
 				</p>
@@ -92,9 +92,9 @@
 			<hr class="my-8 h-1 w-full border-t border-black" />
 
 			<!-- video -->
-			<section class="flex max-xl:flex-wrap">
-				<div class="mr-8 mt-3 h-5 w-5 shrink-0 rounded-full bg-orange-500 max-sm:hidden"></div>
-				<h2 class="mb-8 mr-4 max-w-md text-balance text-4xl font-semibold">
+			<section class="flex max-lg:flex-col-reverse max-lg:flex-wrap">
+				<h2 class="mb-8 mr-4 flex text-balance text-4xl font-semibold lg:max-w-md">
+					<div class="mr-8 mt-3 h-5 w-5 shrink-0 rounded-full bg-orange-500 max-sm:hidden"></div>
 					Équiterre vous dévoile comment cette fausse publicité a été créée et vous donne les outils
 					pour détecter la désinformation qui s’y cache.
 				</h2>
@@ -102,7 +102,7 @@
 				<video
 					controls
 					src="/desinformation.webm"
-					class="mb-4 aspect-video w-[48rem] grow bg-gray-900 xl:max-w-lg"
+					class="mx-auto mb-4 aspect-video w-[48rem] bg-gray-900 lg:max-w-lg"
 				></video>
 			</section>
 			<hr class="my-8 h-1 w-full border-t border-black" />
@@ -110,7 +110,7 @@
 			<!-- newsletter signup -->
 			<section class="my-16">
 				<h2 class="mb-16 text-balance text-center text-4xl font-semibold">
-					{m.shy_same_anteater_comfort()}
+					Remplissez le formulaire pour voir la suite
 				</h2>
 				<div class="mx-auto max-w-screen-xl p-4" id="hs-form"></div>
 			</section>
@@ -176,5 +176,9 @@
 	}
 	:global(.hs-submit) {
 		@apply mt-4 justify-self-center rounded-full bg-orange-500 px-8 py-4 text-xl font-semibold text-white;
+	}
+
+	:global(#hs_show_banner_button) {
+		@apply !bg-orange-500 !text-white;
 	}
 </style>
