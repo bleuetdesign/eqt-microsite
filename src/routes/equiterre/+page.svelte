@@ -63,10 +63,26 @@
 				/>
 			</section>
 
-			<!-- why -->
+			<!-- video -->
 			<section
-				class="flex motion-translate-y-in-100 motion-duration-1000 motion-ease-in-out max-sm:flex-wrap"
+				class="my-8 flex motion-translate-y-in-100 motion-duration-1000 motion-ease-in-out max-lg:flex-col-reverse max-lg:flex-wrap"
 			>
+				<h2 class="mb-8 mr-4 flex text-balance text-4xl font-semibold lg:max-w-md">
+					<div class="mr-8 mt-3 h-5 w-5 shrink-0 rounded-full bg-orange-500 max-sm:hidden"></div>
+					Équiterre vous dévoile comment cette fausse publicité a été créée et vous donne les outils
+					pour détecter la désinformation qui s’y cache.
+				</h2>
+				<div class="grow"></div>
+				<video
+					controls
+					src="/desinformation.webm"
+					class="mx-auto mb-4 aspect-video w-[48rem] bg-gray-900 lg:max-w-lg"
+				></video>
+			</section>
+			<hr class="my-8 h-1 w-full border-t border-black" />
+
+			<!-- why -->
+			<section class="flex max-sm:flex-wrap">
 				<div class="mt-3 h-5 w-5 shrink-0 rounded-full bg-orange-500 max-sm:hidden"></div>
 				<h2 class="mb-4 mr-4 max-w-lg text-balance text-4xl font-semibold sm:ml-8">
 					{m.mad_soft_crocodile_drum()}
@@ -88,22 +104,6 @@
 						intérêts d’entreprises et d’individus qui s’enrichissent à nos dépends.
 					</p>
 				</div>
-			</section>
-			<hr class="my-8 h-1 w-full border-t border-black" />
-
-			<!-- video -->
-			<section class="flex max-lg:flex-col-reverse max-lg:flex-wrap">
-				<h2 class="mb-8 mr-4 flex text-balance text-4xl font-semibold lg:max-w-md">
-					<div class="mr-8 mt-3 h-5 w-5 shrink-0 rounded-full bg-orange-500 max-sm:hidden"></div>
-					Équiterre vous dévoile comment cette fausse publicité a été créée et vous donne les outils
-					pour détecter la désinformation qui s’y cache.
-				</h2>
-				<div class="grow"></div>
-				<video
-					controls
-					src="/desinformation.webm"
-					class="mx-auto mb-4 aspect-video w-[48rem] bg-gray-900 lg:max-w-lg"
-				></video>
 			</section>
 			<hr class="my-8 h-1 w-full border-t border-black" />
 
