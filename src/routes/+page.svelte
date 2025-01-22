@@ -39,12 +39,12 @@
 	<!-- TODO: compress img -->
 	<section
 		style="background: linear-gradient(268.9deg, rgba(0, 0, 0, 0) 31.2%, rgba(0, 0, 0, 0.4) 74.36%), url(/hero.webp) center/cover; background-position: center"
-		class="relative px-8 py-8"
+		class="relative px-8 py-8 xl:h-[44rem]"
 	>
 		<enhanced:img
 			src="./acces_gratuit.svg"
 			alt=""
-			class="absolute right-12 top-12 max-md:hidden"
+			class="absolute right-12 top-12 max-md:hidden xl:right-48"
 			fetchpriority="high"
 		/>
 		<div class="mx-auto max-w-screen-xl">
