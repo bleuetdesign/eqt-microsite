@@ -7,6 +7,11 @@ html {
 	font-synthesis: none;
 }
 
+#hs-banner-parent {
+	--hs-banner-translate-y: -4rem !important;
+	--hs-banner-inset: auto !important;
+}
+
 #hs-eu-cookie-confirmation {
 	font-family: 'Barlow', serif !important;
 	inset: none !important;
