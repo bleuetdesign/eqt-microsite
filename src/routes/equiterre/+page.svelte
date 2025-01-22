@@ -77,11 +77,9 @@
 						{@html m.arable_such_dolphin_zip()}
 					</p>
 					<p>
-						Et avec les réseaux sociaux et l’intelligence artificielle, il est toujours plus
-						difficile d’identifier le vrai du faux. Chaque jour, de plus en plus de désinformation
-						circule et nous pousse à faire des choix néfastes pour notre portefeuille, notre
-						sécurité et notre santé, dans le seul but de servir les intérêts d’entreprises qui
-						s’enrichissent à nos dépends.
+						Avec les nouvelles technologies comme l’intelligence artificielle, il devient à chaque
+						jour plus difficile de différencier le vrai du faux. De plus en plus de personnes sont
+						exposées et influencées par la désinformation.
 					</p>
 					<p>Et, en ce moment, cette personne c’est vous.</p>
 					<p>
@@ -95,15 +93,16 @@
 
 			<!-- video -->
 			<section class="flex max-xl:flex-wrap">
-				<div class="mr-8 mt-3 h-5 w-5 shrink-0 rounded-full bg-orange-500 max-lg:hidden"></div>
-				<h2 class="mb-8 mr-4 max-w-lg text-balance text-4xl font-semibold">
+				<div class="mr-8 mt-3 h-5 w-5 shrink-0 rounded-full bg-orange-500 max-sm:hidden"></div>
+				<h2 class="mb-8 mr-4 max-w-md text-balance text-4xl font-semibold">
 					Équiterre vous dévoile comment cette fausse publicité a été créée et vous donne les outils
 					pour détecter la désinformation qui s’y cache.
 				</h2>
+				<div class="grow"></div>
 				<video
 					controls
 					src="/desinformation.webm"
-					class="mb-4 aspect-video w-[48rem] grow bg-gray-900"
+					class="mb-4 aspect-video w-[48rem] grow bg-gray-900 xl:max-w-lg"
 				></video>
 			</section>
 			<hr class="my-8 h-1 w-full border-t border-black" />
@@ -126,7 +125,7 @@
 					Horizons de politiques Canada.
 				</p>
 				<div class="flex-grow"></div>
-				<div class="max-w-lg text-2xl max-sm:mt-4">
+				<div class="mt-3 max-w-lg text-xl max-sm:mt-4">
 					<p>
 						<strong>Bien s’informer est plus important que jamais.</strong>
 					</p>
