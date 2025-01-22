@@ -53,13 +53,13 @@
 				header: 'Vous avez raison!',
 				icon: 'thermal',
 				explanation:
-					'Nous n’avons qu’une seule planète, il faut en prendre soin. Et en détoxifiant 2 tonnes de CO2 par jour, Pura Terra vous permet de faire votre part de la façon la plus agréable possible.'
+					'Nous n’avons qu’une seule planète, il faut en prendre soin. Et en détoxifiant 2 tonnes de CO<sub>2</sub> par jour, Pura Terra vous permet de faire votre part de la façon la plus agréable possible.'
 			},
 			{
 				header: "C'est vrai!",
 				icon: 'thermal',
 				explanation:
-					'Comment faire une différence sans pour autant se priver? C’est ce qui a donné vie au concept éco-conscient de Pura Terra. Imaginez-vous : en une journée, Pura Terra détoxifie 2 tonnes de CO2!'
+					'Comment faire une différence sans pour autant se priver? C’est ce qui a donné vie au concept éco-conscient de Pura Terra. Imaginez-vous : en une journée, Pura Terra détoxifie 2 tonnes de CO<sub>2</sub>!'
 			},
 			{
 				header: 'Ça tombe bien, vous n’avez pas à vous en préoccuper!',
@@ -140,7 +140,7 @@
 			{a.header}
 		</h1>
 		<p class="mx-auto mb-32 max-w-2xl text-2xl text-gray-100">
-			{a.explanation}
+			{@html a.explanation}
 		</p>
 		<Button class="w-48 px-12" variant="livid" onclick={() => answers.shift()}>Suivant</Button>
 	</div>

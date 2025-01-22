@@ -3,7 +3,7 @@
 	import { fly } from 'svelte/transition';
 	import { cubicOut } from 'svelte/easing';
 	let curtain = true;
-	setTimeout(() => (curtain = false), 0);
+	setTimeout(() => (curtain = false));
 </script>
 
 <svelte:head>
@@ -18,11 +18,6 @@
 	<script>
 		window.hbspt.forms.create({
 			target: '#hs-form',
-			portalId: '21537648',
-			formId: '793bfe68-5ba3-4382-b211-8f4aa30424b8'
-		});
-		window.hbspt.forms.create({
-			target: '#hs-form2',
 			portalId: '21537648',
 			formId: '793bfe68-5ba3-4382-b211-8f4aa30424b8'
 		});
@@ -82,7 +77,11 @@
 						{@html m.arable_such_dolphin_zip()}
 					</p>
 					<p>
-						{m.still_patient_cow_gleam()}
+						Et avec les réseaux sociaux et l’intelligence artificielle, il est toujours plus
+						difficile d’identifier le vrai du faux. Chaque jour, de plus en plus de désinformation
+						circule et nous pousse à faire des choix néfastes pour notre portefeuille, notre
+						sécurité et notre santé, dans le seul but de servir les intérêts d’entreprises qui
+						s’enrichissent à nos dépends.
 					</p>
 					<p>Et, en ce moment, cette personne c’est vous.</p>
 					<p>
@@ -95,13 +94,16 @@
 			<hr class="my-8 h-1 w-full border-t border-black" />
 
 			<!-- video -->
-			<section class="flex max-lg:flex-wrap">
+			<section class="flex max-xl:flex-wrap">
 				<div class="mr-8 mt-3 h-5 w-5 shrink-0 rounded-full bg-orange-500 max-lg:hidden"></div>
 				<h2 class="mb-8 mr-4 max-w-lg text-balance text-4xl font-semibold">
 					Équiterre vous dévoile comment cette fausse publicité a été créée et vous donne les outils
 					pour détecter la désinformation qui s’y cache.
 				</h2>
-				<video controls src="/desinformation.webm" class="mb-4 aspect-video w-full grow bg-gray-900"
+				<video
+					controls
+					src="/desinformation.webm"
+					class="mb-4 aspect-video w-[48rem] grow bg-gray-900"
 				></video>
 			</section>
 			<hr class="my-8 h-1 w-full border-t border-black" />
@@ -139,7 +141,7 @@
 	</div>
 
 	<!-- newsletter signup -->
-	<div class="bg-dark bg-[#1f1f1f]">
+	<div class="bg-[#1f1f1f]">
 		<section
 			class="mx-auto max-w-screen-xl flex-col items-center justify-center gap-y-8 px-4 py-48"
 		>
@@ -148,18 +150,11 @@
 			>
 				En vérifiant l’information,<br /> Équiterre vous aide à distinguer le vrai du faux.
 			</h2>
-			<div class="mx-auto max-w-screen-xl p-4" id="hs-form2"></div>
 		</section>
 	</div>
 </div>
 
 <style lang="postcss">
-	:global(.bg-dark label) {
-		@apply text-lime-200;
-	}
-	:global(.bg-dark .submitted-message) {
-		@apply text-lime-200;
-	}
 	:global(.submitted-message) {
 		@apply mx-auto;
 	}
