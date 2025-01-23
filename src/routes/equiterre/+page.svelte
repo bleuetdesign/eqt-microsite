@@ -79,7 +79,15 @@
 					class="mx-auto mb-4 aspect-video w-[48rem] bg-gray-900 lg:max-w-lg"
 				></video>
 			</section>
-			<hr class="my-8 h-1 w-full border-t border-black" />
+
+			<!-- newsletter signup -->
+			<section class="my-16 motion-translate-y-in-100 motion-duration-1000 motion-ease-in-out">
+				<h2 class="mb-16 text-balance text-center text-4xl font-semibold">
+					Remplissez le formulaire pour voir la suite
+				</h2>
+				<div class="mx-auto max-w-screen-xl p-4" id="hs-form"></div>
+			</section>
+			<hr class="my-4 h-1 w-full border-t border-black" />
 
 			<!-- why -->
 			<section class="flex max-sm:flex-wrap">
@@ -106,16 +114,6 @@
 				</div>
 			</section>
 			<hr class="my-8 h-1 w-full border-t border-black" />
-
-			<!-- newsletter signup -->
-			<section class="my-16">
-				<h2 class="mb-16 text-balance text-center text-4xl font-semibold">
-					Remplissez le formulaire pour voir la suite
-				</h2>
-				<div class="mx-auto max-w-screen-xl p-4" id="hs-form"></div>
-			</section>
-			<hr class="my-4 h-1 w-full border-t border-black" />
-
 			<!-- 3 years from now -->
 			<section class="flex pb-16 max-sm:flex-col">
 				<div class="mt-3 h-5 w-5 shrink-0 rounded-full bg-orange-500 max-sm:hidden"></div>
