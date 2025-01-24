@@ -11,8 +11,7 @@
 		out:fly={{ y: '100%', opacity: 1, duration: 750, easing: cubicOut }}
 		class="-motion-scale-y-in-0 fixed inset-0 top-[50%] z-10 bg-[#1f1f1f]"
 	></div>
-{/if}
-<div>
+{:else}
 	<script type="text/javascript" id="hs-script-loader" async defer src="/21537648.js"></script>
 	<script charset="utf-8" type="text/javascript" src="/forms-embed-v2.js"></script>
 	<script>
@@ -22,6 +21,9 @@
 			formId: '793bfe68-5ba3-4382-b211-8f4aa30424b8'
 		});
 	</script>
+{/if}
+
+<div>
 	<div class="bg-[#F4F3E6]">
 		<div class="mx-auto max-w-screen-xl px-8">
 			<nav>
