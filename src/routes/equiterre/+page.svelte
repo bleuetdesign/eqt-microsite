@@ -23,8 +23,6 @@
 {/if}
 
 <div>
-	<script type="text/javascript" id="hs-script-loader" async defer src="/21537648.js"></script>
-	<script charset="utf-8" type="text/javascript" src="/forms-embed-v2.js"></script>
 	<div class="bg-[#F4F3E6]">
 		<div class="mx-auto max-w-screen-xl px-8">
 			<nav>

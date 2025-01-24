@@ -33,6 +33,11 @@
 	let { children } = $props();
 </script>
 
+<svelte:head>
+	<script type="text/javascript" id="hs-script-loader" async defer src="/21537648.js"></script>
+	<script charset="utf-8" type="text/javascript" async defer src="/forms-embed-v2.js"></script>
+</svelte:head>
+
 <ParaglideJS {i18n}>
 	{@render children()}
 </ParaglideJS>
