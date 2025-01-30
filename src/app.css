@@ -24,16 +24,17 @@ html {
 }
 
 #hs_show_banner_button {
-	@apply fixed bottom-8 right-8 z-50 !rounded-full !bg-emerald-950 !text-emerald-50;
+	@apply fixed bottom-4 right-8 z-50 !rounded-full !bg-emerald-950 !text-emerald-50;
 }
 
 @media not all and (min-width: 640px) {
 	#hs_show_banner_button {
-		@apply h-12 w-12 !text-transparent;
+		@apply h-10 w-10 !text-transparent;
 	}
+
 	#hs_show_banner_button::before {
 		content: '🍪';
-		@apply absolute left-[10px] top-[6px] text-2xl text-white;
+		@apply absolute left-[8px] top-[4px] text-xl text-white;
 	}
 }
 

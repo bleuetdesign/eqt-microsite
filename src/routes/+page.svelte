@@ -139,7 +139,7 @@
 		></div>
 	</section>
 
-	<footer class="relative z-10 bg-emerald-950 px-8 py-8">
+	<footer class="relative z-10 bg-emerald-950 px-8 py-16">
 		<div class="mx-auto flex max-w-screen-xl justify-between">
 			<img src="/logo.svg" alt="" class="h-16" />
 			<div
