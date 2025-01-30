@@ -24,7 +24,7 @@ html {
 }
 
 #hs_show_banner_button {
-	@apply fixed bottom-8 right-8 z-10 !rounded-full !bg-emerald-950 !text-emerald-50;
+	@apply fixed bottom-8 right-8 z-50 !rounded-full !bg-emerald-950 !text-emerald-50;
 }
 
 @media not all and (min-width: 640px) {
