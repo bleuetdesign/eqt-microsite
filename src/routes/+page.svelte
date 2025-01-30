@@ -91,15 +91,15 @@
 	</section>
 
 	<!-- nos soins -->
-	<section class="relative z-10 bg-emerald-950 px-16 py-4">
+	<section class="relative z-10 overflow-x-hidden bg-emerald-950 px-16 py-4">
 		<div class="mx-auto w-full max-w-screen-xl">
 			<div
 				class="my-12 flex items-center justify-between max-lg:flex-col-reverse max-lg:text-center"
 			>
 				<div class="flex flex-col gap-y-8 text-balance text-white max-lg:items-center">
 					<h2 class="w-fit text-5xl font-medium leading-tight">{m.glad_quick_termite_feel()}</h2>
-					<p class="max-w-md text-xl">{m.sad_real_mare_flop()}</p>
-					<ul class="flex size-fit flex-col space-y-4 divide-y divide-emerald-50">
+					<p class="max-w-md px-4 text-xl">{m.sad_real_mare_flop()}</p>
+					<ul class="flex size-fit flex-col space-y-4 divide-emerald-50 sm:divide-y">
 						{#each [{ img: '/thermal.svg', text: m.weary_dirty_rook_type() }, { img: '/masso.svg', text: m.tense_fresh_monkey_sail() }, { img: '/soins_corps.svg', text: m.neat_merry_deer_pick() }, { img: '/soins_visage.svg', text: m.honest_broad_otter_favor() }] as { img, text }}
 							<li class="flex w-[28rem] items-center gap-x-12 max-lg:justify-center">
 								<img src={img} alt="" class="mt-4 h-16 w-16" />
