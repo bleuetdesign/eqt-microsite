@@ -139,9 +139,9 @@
 		></div>
 	</section>
 
-	<footer class="relative z-10 bg-emerald-950 px-8 py-16">
+	<footer class="relative z-10 overflow-x-hidden bg-emerald-950 px-8 py-16">
 		<div class="mx-auto flex max-w-screen-xl justify-between">
-			<img src="/logo.svg" alt="" class="h-16" />
+			<img src="/logo.svg" alt="" class="h-16 max-sm:h-12" />
 			<div
 				class="flex items-center justify-between gap-x-12 px-4 text-center text-xs text-gray-300 max-md:gap-x-4 max-sm:gap-x-2 max-sm:px-0"
 			>
