@@ -143,13 +143,13 @@
 		<div class="mx-auto flex max-w-screen-xl justify-between">
 			<img src="/logo.svg" alt="" class="h-16" />
 			<div
-				class="flex items-center justify-between gap-x-12 px-4 text-center text-xs text-gray-300 max-md:gap-x-4"
+				class="flex items-center justify-between gap-x-12 px-4 text-center text-xs text-gray-300 max-md:gap-x-4 max-sm:gap-x-2 max-sm:px-0"
 			>
 				<a href="#">{m.game_deft_crab_forgive()}</a>
 				<a href="#">{m.lofty_acidic_seal_pat()}</a>
 				<a class="max-sm:hidden" href="#">{m.lime_dry_alligator_quell()}</a>
 			</div>
-			<div class="flex items-center gap-x-6">
+			<div class="flex items-center gap-x-6 max-sm:gap-x-3">
 				<a
 					target="_blank"
 					href="https://www.instagram.com/spapuraterra/"
