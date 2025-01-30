@@ -145,8 +145,8 @@
 			<div
 				class="flex items-center justify-between gap-x-12 px-4 text-center text-xs text-gray-300 max-md:gap-x-4 max-sm:gap-x-2 max-sm:px-0"
 			>
-				<a href="#">{m.game_deft_crab_forgive()}</a>
-				<a href="#">{m.lofty_acidic_seal_pat()}</a>
+				<a class="max-sm:w-20" href="#">{m.game_deft_crab_forgive()}</a>
+				<a class="max-sm:w-20" href="#">{m.lofty_acidic_seal_pat()}</a>
 				<a class="max-sm:hidden" href="#">{m.lime_dry_alligator_quell()}</a>
 			</div>
 			<div class="flex items-center gap-x-6 max-sm:gap-x-3">
@@ -168,9 +168,3 @@
 		</div>
 	</footer>
 </main>
-
-<style lang="postcss">
-	:global(#hs_show_banner_button) {
-		@apply !border-emerald-50;
-	}
-</style>
