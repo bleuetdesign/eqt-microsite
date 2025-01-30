@@ -4,6 +4,7 @@
 		class: classes = undefined,
 		href = undefined,
 		variant = 'dark',
+		onclick = undefined,
 		...props
 	} = $props();
 </script>
@@ -21,6 +22,8 @@
 	]}
 	{href}
 	data-sveltekit-preload-data={href && 'hover'}
+	{onclick}
+	tabindex="0"
 	{...props}
 >
 	{@render children?.()}

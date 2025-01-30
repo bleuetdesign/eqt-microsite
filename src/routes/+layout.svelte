@@ -41,13 +41,3 @@
 <ParaglideJS {i18n}>
 	{@render children()}
 </ParaglideJS>
-
-<style lang="postcss">
-	:global(:root) :not(p) {
-		@apply max-sm:text-[90%];
-	}
-
-	:global(#hs_show_banner_button) {
-		@apply fixed bottom-8 right-8 z-10 !rounded-full !bg-emerald-950 !text-emerald-50;
-	}
-</style>
